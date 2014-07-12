@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ params.city }}の天気予報</title>
+    </head>
+    <body>
+        <h1>{{ params.city }}</h1>
+        <ul>
+        {% for forecast in params.forecasts %}
+            <li>{{ forecast['date'] }}:{{ forecast['telop'] }}</li>
+        {% endfor %}
+        </ul>
+    </body>
+</html>
+
